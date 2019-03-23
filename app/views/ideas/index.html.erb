@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cualquier Cosa</h1>
+<%= link_to 'New Idea', new_idea_path , {:class => "btn" , :style => "color: #f6ff17;font-size: 22px;font-weight: bold;"} %> 
+<div style="display:flex; justify-content: center;">
+  <% @ideas.each do |idea| %>
+    <div class="card" style="width: 250px;margin:20px;background-color: #f6ff17">
+      <a href="<%= idea_path(idea)%>"> <img class="card-img-top" src="<%= idea.picture_url %>" alt="Card image cap" style="height:300px;"> </a>
+      <div class="card-body">
+        <h5 class="card-title"><%= idea.name %></h5>
+        <p class="card-text"><%= idea.description %></p>
+        <!--<%= link_to "mostrar", idea, {:class => "btn btn-primary"} %>-->
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<a href="http://www.gordamiami.tumblr.com" target="_blank" class="btn" style="color: #45f46d; font-weight: bold;font-size: x-large;">seguir en tumblr</a> 
+
+
+<br>
+
+
